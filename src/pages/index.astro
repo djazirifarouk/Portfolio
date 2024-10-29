@@ -11,6 +11,7 @@ import Hero from '../components/Hero.astro';
 import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
+import NormalButton from '../components/NormalButton.astro';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
@@ -21,42 +22,129 @@ const projects = (await getCollection('work'))
 	.sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
 	.slice(0, 4);
 
+// Define a list of recommendations in the Astro component.
+const recommendations = [
+	{
+		photo: '/assets/recommend1.jpg',
+		name: 'Mohamed Ali Fathallah',
+		position: 'Data Team Lead at DNEXT',
+		text: "I had the pleasure of working closely with Farouk, and I can confidently say that he is an exceptionally intelligent and quick learner. His expertise in data processing and analysis, particularly with Python and Power BI, is impressive. Farouk consistently demonstrates a keen eye for detail and a strong commitment to delivering high-quality work. Beyond his technical abilities, Farouk also excels in interpersonal skills, making him a well-rounded and effective team member. He is not only technically proficient but also a great collaborator who communicates effectively and fosters a positive work environment.",
+	},
+	{
+		photo: '/assets/recommend2.jpg',
+		name: 'Ahmed Ben Abdessalem',
+		position: 'Senior Full Stack Engineer',
+		text: "I had the privilege of working with Farouk at DNEXT Intelligence SA, where his role as a Data Analyst was instrumental in driving data-driven solutions. His expertise in Python, SQL, and Power BI consistently turned complex data into actionable insights that greatly impacted strategic decisions. Farouk’s ability to create custom reports and dashboards streamlined our analysis process, significantly improving efficiency. His strong technical background, paired with his proactive approach to problem-solving, made collaborating with him a smooth and productive experience. I highly recommend Farouk for any role where data analytics and innovation are key.",
+	},
+	{
+		photo: '/assets/portrait_backup.jpg',
+		name: 'Farouk Jaziri',
+		position: 'Data Engineer at XYZ Inc.',
+		text: "Farouk’s work ethic and dedication were a huge asset to our company and to our environment.",
+	},
+	// Add more recommendation objects as needed
+];
+
+// Define a list of certifications in the Astro component.
+const certifications = [
+	{
+        "title": "Data Analyst",
+        "issuer": "IBM",
+        "description": "A comprehensive course on data analysis fundamentals, including Python, SQL, and data visualization.",
+		"link": "https://credentials.edx.org/credentials/ee89f505c5964828a3b3a0dbefc15058/",
+        "image": "/assets/certif1.jpg"
+    },
+	{
+        "title": "Linux Commands & Shell Scripting",
+        "issuer": "IBM",
+        "description": "A comprehensive course on data analysis fundamentals, including Python, SQL, and data visualization.",
+		"link": "https://courses.edx.org/certificates/39fa65b92fbf41f2a04fe6132d411bfd",
+        "image": "/assets/certif2.jpg"
+    },
+	{
+        "title": "Analyzing Data with Python",
+        "issuer": "IBM",
+        "description": "A comprehensive course on data analysis fundamentals, including Python, SQL, and data visualization.",
+		"link": "https://courses.edx.org/certificates/6a1a82fc16e74fc7b62ea2a59df287e4",
+        "image": "/assets/certif3.jpg"
+    },
+	{
+        "title": "SQL for Data Science",
+        "issuer": "IBM",
+        "description": "A comprehensive course on data analysis fundamentals, including Python, SQL, and data visualization.",
+		"link": "https://courses.edx.org/certificates/f6a1da898a4a4846bc912e25678357fb",
+        "image": "/assets/certif4.jpg"
+    },
+	{
+        "title": "Building Dashboards with Excel and Cognos",
+        "issuer": "IBM",
+        "description": "A comprehensive course on data analysis fundamentals, including Python, SQL, and data visualization.",
+		"link": "https://courses.edx.org/certificates/e4c7ab1819534d7ab39f39942a2f24b9",
+        "image": "/assets/certif5.jpg"
+    },
+	// Add more recommendation objects as needed
+];
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
 
 <BaseLayout>
-	<div class="stack gap-20 lg:gap-48">
+	<div class="stack gap-20 lg:gap-55">
+<!-- Identity -->
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Jeanine White"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					title="Hello, I'm Farouk Jaziri"
+					tagline="I am an analytics engineer currently based in Monastir, Tunisia."
 					align="start"
-				>
+				> 
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<Pill><Icon icon="python" size="1.33em" /> Python</Pill>
+						<Pill><Icon icon="sql" size="1.33em" /> SQL</Pill>
+						<Pill><Icon icon="etl" size="1.33em" /> ETL</Pill>
+						<Pill><Icon icon="power-bi" size="1.33em" /> Power BI</Pill>
+					</div>
+					<div class="divider"></div> <!-- Divider -->
+					<div class="cta" style="display: flex; justify-content: space-between; align-items: center;" >
+    					<div style="margin-right: 10px; flex: 1; text-align: center;">
+							<NormalButton href="/assets/Farouk Jaziri CV.pdf">
+								<Icon icon="cv" size="1em" />
+								Resume
+							</NormalButton>
+						</div>
+    					<div style="margin-left: 10px; flex: 1; text-align: center;">
+							<NormalButton href="https://wa.me/0021625992985">
+								<Icon icon="whatsapp" size="1em" />
+								Whatsapp
+							</NormalButton>
+						</div>
 					</div>
 				</Hero>
-
 				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
+					alt="Farouk Jaziri smiling in a green shirt and black shell glasses"
 					width="480"
 					height="620"
 					src="/assets/portrait.jpg"
 				/>
 			</header>
-
+<!-- Areas of Interest -->
+		</div>
+		<div class="wrapper">
+			<section class="section with-background bg-variant">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h3>Areas of Interest</h3>
+					<p>a strong passion for continuous learning and innovation.</br>
+						Looking for challenging opportunities to contribute and grow more in my career and share my knowledge within a skilled team.</p>
+				</header>
+			</section>
 			<Skills />
 		</div>
-
+<!-- Featured Projects -->
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
+					<h3>Featured Projects</h3>
+					<p>Take a look below at some of my featured work from the past few years.</p>
 				</header>
 
 				<div class="gallery">
@@ -78,26 +166,55 @@ const projects = (await getCollection('work'))
 					</CallToAction>
 				</div>
 			</section>
-
+<!-- Certifications -->
+			<section class="section with-background bg-variant" style="padding: 3rem 1rem; display: flex; flex-direction: column; align-items: center;">
+				<header class="section-header stack gap-2 lg:gap-4">
+					<h3>Professional Certifications</h3>
+					<p>
+						Here are some of the certifications I’ve earned to enhance my skills and knowledge.
+					</p>
+				</header>
+				<div class="carousel-container">
+					<div class="certifications-container">
+						{certifications.map((certification) => (
+							<a href={certification.link} target="_blank" rel="noopener noreferrer" class="certification-link">
+								<div class="certification-card">
+									<img src={certification.image} alt={`Certification for ${certification.title}`} draggable="false" />
+									<div class="certification-info">
+										<p class="certification-title">{certification.title}</p>
+										<p class="certification-issuer">{certification.issuer}</p>
+										<p class="certification-description">{certification.description}</p>
+									</div>
+								</div>
+							</a>
+						))}
+					</div>
+				</div>			
+			</section>
+<!-- Mentions -->
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Mentions</h3>
 					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
+						I have been fortunate enough to receive praise for my work on several occasions. Take
 						a look below to learn more.
 					</p>
 				</header>
-
 				<div class="gallery">
-					<Grid variant="small">
-						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
+					<div class="recommend-slider" id="slider">
+						<div class="slider-track">
+							{recommendations.map((recommendation) => (
+								<div class="recommend-card">
+									<img src={recommendation.photo} alt={`Profile of ${recommendation.name}`} class="profile-photo" />
+									<div class="text-container">
+										<p class="name">{recommendation.name}</p>
+										<p class="position">{recommendation.position}</p>
+										<p class="recommendation-text">{recommendation.text}</p>
+									</div>
+								</div>
+							))}
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -249,4 +366,282 @@ const projects = (await getCollection('work'))
 			height: 9.5rem;
 		}
 	}
+	/* ====================================================== */
+
+	.recommend-slider {
+		position: relative;
+		width: 100%;
+		max-width: 40rem;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+
+	.slider-track {
+		display: flex;
+		transition: transform 0.5s ease-in-out;
+		width: 100%;
+	}
+
+	.recommend-card {
+		flex: 0 0 100%;
+		padding: 1.5rem;
+		background: var(--gradient-subtle);
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		box-shadow: var(--shadow-sm);
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.profile-photo {
+		width: 5rem; /* Adjusted width for better visibility */
+		height: 5rem; /* Adjusted height for better visibility */
+		border-radius: 50%;
+		object-fit: cover;
+		box-shadow: var(--shadow-md);
+	}
+
+	.text-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.name {
+		font-size: 1.5rem;
+		font-weight: 900;
+		color: var(--gray-300);
+		margin: 0;
+	}
+
+	.position {
+		font-size: 0.9rem;
+		font-style: italic;
+		color: var(--gray-300);
+		margin: 0;
+	}
+
+	.recommendation-text {
+		font-size: 0.95rem;
+		line-height: 1.4;
+		color: var(--gray-300);
+		margin-top: 5px;
+	}
+
+	@media (max-width: 50em) {
+		.recommend-card {
+			padding: 0.5rem; /* Even smaller padding */
+		}
+
+		.profile-photo {
+			width: 3.5rem; /* Adjust photo size further */
+			height: 3.5rem;
+		}
+
+		.name {
+			font-size: 1rem; /* Smaller font for name */
+		}
+
+		.position {
+			font-size: 0.8rem; /* Smaller font for position */
+		}
+
+		.recommendation-text {
+			font-size: 0.8rem; /* Smaller text for recommendation */
+		}
+	}
+
+	.divider {
+		width: 100%;
+		height: 2px; /* Thickness of the divider */
+		background-color: #e2e8f0; /* Color of the divider */
+		margin: 1rem 0; /* Space around the divider */
+	}
+
+	/* ====================================================== */
+	
+/* Carousel Container */
+.certifications-container {
+	display: flex;
+	gap: 1rem;
+	overflow-x: auto;
+	overflow-y: hidden; /* Disables vertical scroll */
+	scroll-behavior: smooth;
+	scroll-snap-type: x mandatory;
+	padding: 1rem;
+	-webkit-overflow-scrolling: touch;
+	box-sizing: border-box;
+}
+
+/* Hide Scrollbar on Webkit Browsers */
+.certifications-container::-webkit-scrollbar {
+	display: none;
+}
+
+/* Each Certification Link */
+.certification-link {
+	text-decoration: none;
+	color: inherit;
+	flex: 0 0 auto;
+	width: 100%;
+	max-width: 350px;
+	scroll-snap-align: start;
+}
+
+/* Certification Card */
+.certification-card {
+	background: #fff;
+	border-radius: 12px;
+	padding: 1rem;
+	border: 1px solid #e0e0e0;
+	transition: transform 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 400px; /* Increased card height */
+}
+
+.certification-card:hover {
+	transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Certification Card Image */
+.certification-card img {
+	width: 100%;
+	height: 250px;
+	border-radius: 12px;
+	object-fit: cover;
+	margin-bottom: 1rem;
+}
+
+/* Certification Card Info */
+.certification-info {
+	padding: 0.5rem;
+}
+
+/* Certification Title */
+.certification-title {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #503D36;
+	margin-bottom: 0.5rem;
+}
+
+/* Certification Issuer and Description */
+.certification-issuer {
+	font-size: 1rem;
+	font-weight: 500;
+	color: #666;
+}
+.certification-description {
+	font-size: 0.9rem;
+	color: #333;
+	margin-top: 0.5rem;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+	.carousel-container {
+		padding: 1rem;
+	}
+
+	.certifications-container {
+		padding: 0.5rem;
+	}
+
+	.certification-card {
+		height: 350px;
+	}
+
+	.certification-card img {
+		height: 200px;
+	}
+
+	.certification-title {
+		font-size: 1rem;
+	}
+
+	.certification-issuer,
+	.certification-description {
+		font-size: 0.85rem;
+	}
+}
+
 </style>
+
+<script>
+	let currentIndex = 0;
+	let autoSlide;
+
+	// Function to move to the next slide
+	function moveSlider() {
+		const sliderTrack = document.querySelector('.slider-track');
+		const totalSlides = sliderTrack.children.length;
+
+		currentIndex = (currentIndex + 1) % totalSlides;
+		sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+	}
+
+	// Start the auto-slide with interval
+	function startAutoSlide() {
+		autoSlide = setInterval(moveSlider, 5000);
+	}
+
+	// Stop the auto-slide
+	function stopAutoSlide() {
+		clearInterval(autoSlide);
+	}
+
+	// Event listeners to start/stop the slide on hover
+	const slider = document.getElementById('slider');
+	slider.addEventListener('mouseenter', stopAutoSlide);
+	slider.addEventListener('mouseleave', startAutoSlide);
+
+	// Start auto-slide on page load
+	startAutoSlide();
+
+	// Function to scroll horizontally
+	document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector('.certifications-container');
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    container.addEventListener('mousedown', (e) => {
+      isDown = true;
+      container.classList.add('active');
+      startX = e.pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    });
+
+    container.addEventListener('mouseleave', () => {
+      isDown = false;
+      container.classList.remove('active');
+    });
+
+    container.addEventListener('mouseup', () => {
+      isDown = false;
+      container.classList.remove('active');
+    });
+
+    container.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - container.offsetLeft;
+      const walk = (x - startX) * 2; // scroll speed
+      container.scrollLeft = scrollLeft - walk;
+    });
+
+    container.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    });
+
+    container.addEventListener('touchmove', (e) => {
+      const x = e.touches[0].pageX - container.offsetLeft;
+      const walk = (x - startX) * 2;
+      container.scrollLeft = scrollLeft - walk;
+    });
+  });
+</script>
