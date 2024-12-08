@@ -1,8 +1,8 @@
 ---
 title: Global Tenders
-publishDate: 2024-08-01 00:00:00
-img: /assets/cnf/cnf_cover.jpeg
-img_alt: Final Year Graduation Project
+publishDate: 2024-12-09 00:00:00
+img: /assets/tenders/tenders_cover.jpg
+img_alt: Global Tenders Project
 description: |
   This project automates tooth decay detection and segmentation in panoramic X-rays using AI techniques. By employing preprocessing, data augmentation, and a Mask R-CNN model, it enhances diagnostic accuracy and promotes AI integration in dental care.
 tags:
