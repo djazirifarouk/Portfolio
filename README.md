@@ -25,7 +25,7 @@ I'm Farouk, a Data Analyst and Software Engineer with a strong foundation in Pyt
 
 ---
 
-## Experience ⌟️
+## Experience 🏢
 
 ### Data Analyst at DNEXT (Sousse, Tunisia)
 *May 2022 - Present*
