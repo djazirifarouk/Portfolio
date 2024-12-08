@@ -55,6 +55,13 @@ const certifications = [
         "image": "/assets/certif1.jpg"
     },
 	{
+        "title": "Power BI Job Simulation",
+        "issuer": "PwC",
+        "description": "Completed a job simulation to enhance Power BI skills and client-focused data visualization.",
+		"link": "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/4sLyCPgmsy8DA6Dh3/a87GpgE6tiku7q3gu_4sLyCPgmsy8DA6Dh3_EZMZWQG5Wd2vzLm9p_1733352207601_completion_certificate.pdf",
+        "image": "/assets/certif6.jpg"
+    },
+	{
         "title": "Linux Commands & Shell Scripting",
         "issuer": "IBM",
         "description": "A comprehensive course on data analysis fundamentals, including Python, SQL, and data visualization.",
@@ -97,7 +104,7 @@ const certifications = [
 					title="Hello, I'm Farouk Jaziri"
 					tagline="I am an analytics engineer currently based in Monastir, Tunisia."
 					align="start"
-				> 
+				>
 					<div class="roles">
 						<Pill><Icon icon="python" size="1.33em" /> Python</Pill>
 						<Pill><Icon icon="sql" size="1.33em" /> SQL</Pill>
@@ -465,7 +472,7 @@ const certifications = [
 	display: flex;
 	gap: 1rem;
 	overflow-x: auto;
-	overflow-y: hidden; /* Disables vertical scroll */
+	overflow-y: hidden; 
 	scroll-behavior: smooth;
 	scroll-snap-type: x mandatory;
 	padding: 1rem;
@@ -523,7 +530,7 @@ const certifications = [
 .certification-title {
 	font-size: 1.2rem;
 	font-weight: bold;
-	color: #503D36;
+	color: #000000;
 	margin-bottom: 0.5rem;
 }
 
@@ -542,6 +549,7 @@ const certifications = [
 /* Responsive Styles for Smaller Screens */
 @media (max-width: 768px) {
 	.carousel-container {
+		margin-left: 5em;
 		padding: 1rem;
 	}
 
@@ -550,7 +558,7 @@ const certifications = [
 	}
 
 	.certification-card {
-		height: 350px;
+		height: 400px;
 	}
 
 	.certification-card img {
