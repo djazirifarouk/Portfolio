@@ -1,6 +1,6 @@
 ---
 title: Crop Progress Prediction Model
-publishDate: 2024-08-01 00:00:00
+publishDate: 2023-02-01 00:00:00
 img: /assets/crop_progress/crop_progress_cover.jpg
 img_alt: Final Year Graduation Project
 description: |

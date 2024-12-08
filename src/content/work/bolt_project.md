@@ -1,8 +1,8 @@
 ---
-title: Crop Progress Prediction Model
-publishDate: 2024-08-01 00:00:00
-img: /assets/crop_progress/crop_progress_cover.jpg
-img_alt: Final Year Graduation Project
+title: Bolt Challenge
+publishDate: 2024-10-15 00:00:00
+img: /assets/bolt/bolt_cover.png
+img_alt: Bolt Market Analysis Challenge
 description: |
   This project automates tooth decay detection and segmentation in panoramic X-rays using AI techniques. By employing preprocessing, data augmentation, and a Mask R-CNN model, it enhances diagnostic accuracy and promotes AI integration in dental care.
 tags:
