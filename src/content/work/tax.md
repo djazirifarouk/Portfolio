@@ -4,12 +4,12 @@ publishDate: 2024-08-31 00:00:00
 img: /assets/taxes/taxes_cover.jpg
 img_alt: Global Taxation Project
 description: |
-  This project automates tooth decay detection and segmentation in panoramic X-rays using AI techniques. By employing preprocessing, data augmentation, and a Mask R-CNN model, it enhances diagnostic accuracy and promotes AI integration in dental care.
+  Analyzed taxation across North Africa to compare imported and local product prices, providing actionable insights into customs-clearance cost dynamics.
 tags:
-  - CRISP-DM
-  - Deep Learning
-  - Computer Vision
-  - Mask R-CNN
+  - Data Analysis
+  - Reporting
+  - SQL
+  - BeautifulSoup
 #   - Adaptive histogram equalization
 #   - Dataset exploration
 #   - Data augmentation
