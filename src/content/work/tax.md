@@ -1,6 +1,6 @@
 ---
 title: Taxes of North Africa
-publishDate: 2024-08-31 00:00:00
+publishDate: 2024-06-15 00:00:00
 img: /assets/taxes/taxes_cover.jpg
 img_alt: Global Taxation Project
 description: |
