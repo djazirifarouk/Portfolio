@@ -1,6 +1,6 @@
 ---
 title: Cost and Freight Project (C&F)
-publishDate: 2024-08-01 00:00:00
+publishDate: 2024-08-31 00:00:00
 img: /assets/cnf/cnf_cover.jpeg
 img_alt: C&F Data Preparation and Dashboard
 description: |
