@@ -10,9 +10,6 @@ tags:
   - Power Query
   - DAX
   - UI/UX
-  # - Optimization
-  # - Analysis
-  # - Modeling
 ---
 
 ## Advanced Power BI Dashboard Creation
