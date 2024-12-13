@@ -4,12 +4,12 @@ publishDate: 2024-12-09 00:00:00
 img: /assets/tenders/tenders_cover.jpg
 img_alt: Global Tenders Project
 description: |
-  This project automates tooth decay detection and segmentation in panoramic X-rays using AI techniques. By employing preprocessing, data augmentation, and a Mask R-CNN model, it enhances diagnostic accuracy and promotes AI integration in dental care.
+  Analyzed and structured global tender data to deliver insightful, client-focused dashboards for tracking prices, quantities, and trends across multiple countries.
 tags:
-  - CRISP-DM
-  - Deep Learning
-  - Computer Vision
-  - Mask R-CNN
+  - Pattern recognition
+  - Time series analysis
+  - Weighted average
+  - Client-oriented
 ---
 
 ## Global Tenders Analysis
