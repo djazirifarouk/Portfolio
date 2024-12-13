@@ -10,12 +10,6 @@ tags:
   - XGBoost
   - Predictive Modeling
   - Time-Series Data
-#   - Adaptive histogram equalization
-#   - Dataset exploration
-#   - Data augmentation
-#   - Contour detection
-#   - Region Proposal Network
-#   - Model training and evaluation
 ---
 
 ## Crop Progress Prediction Model
