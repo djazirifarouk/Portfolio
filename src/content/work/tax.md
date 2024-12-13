@@ -10,12 +10,6 @@ tags:
   - Reporting
   - SQL
   - BeautifulSoup
-#   - Adaptive histogram equalization
-#   - Dataset exploration
-#   - Data augmentation
-#   - Contour detection
-#   - Region Proposal Network
-#   - Model training and evaluation
 ---
 
 ## North Africa Taxes
