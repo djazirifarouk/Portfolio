@@ -4,12 +4,11 @@ publishDate: 2023-10-01 00:00:00
 img: /assets/snd_usa/snd_usa_cover.jpg
 img_alt: Supply and Demand Outlook Project
 description: |
-  This project automates tooth decay detection and segmentation in panoramic X-rays using AI techniques. By employing preprocessing, data augmentation, and a Mask R-CNN model, it enhances diagnostic accuracy and promotes AI integration in dental care.
+  A comprehensive analysis comparing historical and forecasted supply and demand data for U.S. agricultural products, integrating multiple sources to identify trends, relationships, and insights through a Power BI dashboard.
 tags:
-  - CRISP-DM
-  - Deep Learning
-  - Computer Vision
-  - Mask R-CNN
+  - Mapping
+  - Trend Analysis
+  - Advanced DAX
 ---
 
 ## Supply and Demand Analysis of USA
