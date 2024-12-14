@@ -1,7 +1,7 @@
 ---
 title: Global Tenders
 publishDate: 2024-12-09 00:00:00
-img: /assets/tenders/tenders_cover.jpg
+img: /Portfolio/assets/tenders/tenders_cover.jpg
 img_alt: Global Tenders Analysis Project
 description: |
   Analyzed and structured global tender data to deliver insightful, client-focused dashboards for tracking prices, quantities, and trends across multiple countries.
@@ -26,7 +26,7 @@ This project involved analyzing global tender data to provide insightful visuali
 1. **News Page**:
    - Displayed the latest tenders for each product and country.
 
-![Tenders News](/assets/tenders/tenders1.png)
+![Tenders News](/Portfolio/assets/tenders/tenders1.png)
 *Showcasing the latest tenders*
 
 2. **Price Analysis**:
@@ -34,7 +34,7 @@ This project involved analyzing global tender data to provide insightful visuali
    - Enabled client-specific configurations, such as defining crop year start months.
    - Incorporated averages for the past 3, 5, and 10 years into price trend lines.
 
-![Price Analysis](/assets/tenders/tenders2.png)
+![Price Analysis](/Portfolio/assets/tenders/tenders2.png)
 *Showcasing the prices line chart analysis*
 
 3. **Quantity Analysis**:
@@ -42,17 +42,17 @@ This project involved analyzing global tender data to provide insightful visuali
    - Created seasonal and cumulative monthly quantity tables to compare yearly trends.
    - Included a quarterly proportions table for average tendered quantities.
 
-![Quantity Analysis](/assets/tenders/tenders3.png)
+![Quantity Analysis](/Portfolio/assets/tenders/tenders3.png)
 *Showcasing the monthly quantity analysis*
 
 4. **Pace and Purchase Trends**:
    - Designed line charts to monitor purchasing trends.
    - Built a purchase history dashboard to compare each tender's purchase price with the weighted average price, identifying patterns of over- or under-payment.
 
-![Pace Analysis](/assets/tenders/tenders4.png)
+![Pace Analysis](/Portfolio/assets/tenders/tenders4.png)
 *Showcasing the pace and proportion analysis*
 
-![Quantity Analysis](/assets/tenders/tenders5.png)
+![Quantity Analysis](/Portfolio/assets/tenders/tenders5.png)
 *Showcasing purchase history dashboard*
 
 #### Challenges Overcome ⚡

@@ -1,7 +1,7 @@
 ---
 title: Dashboard Development
 publishDate: 2024-01-01 00:00:00
-img: /assets/power_bi_dev/powerbi_cover.jpg
+img: /Portfolio/assets/power_bi_dev/powerbi_cover.jpg
 img_alt: Interactive Power BI dashboards with custom visuals and optimized DAX calculations
 description: |
   Detailed documentation of my Power BI project, featuring advanced visuals, data challenges, and optimized DAX measures to improve a report performance.
@@ -42,14 +42,14 @@ Below are some visual examples of complex Power BI dashboards created to tackle 
 
 ### Dashboard Showcase
 
-![Example 1: Fiscal Year Custom Start Month = September](/assets/power_bi_dev/start_month1.png)
-![Example 1: Fiscal Year Custom Start Month = May](/assets/power_bi_dev/start_month2.png)
+![Example 1: Fiscal Year Custom Start Month = September](/Portfolio/assets/power_bi_dev/start_month1.png)
+![Example 1: Fiscal Year Custom Start Month = May](/Portfolio/assets/power_bi_dev/start_month2.png)
 *An interactive dashboard where clients can set a custom fiscal start month, improving relevance and accuracy for year-over-year comparisons.*
 
-![Example 2: Complex Data Visualization](/assets/power_bi_dev/visual_calculation.png)
+![Example 2: Complex Data Visualization](/Portfolio/assets/power_bi_dev/visual_calculation.png)
 *A visual showcasing complex DAX calculations made with simple visual calculations.*
 
-![Example 3: KPI and Performance Analysis](/assets/power_bi_dev/kpi.png)
+![Example 3: KPI and Performance Analysis](/Portfolio/assets/power_bi_dev/kpi.png)
 *Interactive dashboard showcasing key metrics for performance monitoring and decision-making.*
 
 #### Summary

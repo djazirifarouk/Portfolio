@@ -1,7 +1,7 @@
 ---
 title: Final Graduation Project
 publishDate: 2022-10-31 00:00:00
-img: /assets/decay_segmentation/decay_cover.png
+img: /Portfolio/assets/decay_segmentation/decay_cover.png
 img_alt: Final Year Graduation Project
 description: |
   This project automates tooth decay detection and segmentation in panoramic X-rays using AI techniques. By employing preprocessing, data augmentation, and a Mask R-CNN model, it enhances diagnostic accuracy and promotes AI integration in dental care.
@@ -86,17 +86,17 @@ Tooth decay, also known as dental caries, affects a significant percentage of th
 
 ### Visual Examples 📸
 #### **1. Preprocessed Images**
-![Preprocessed X-Ray](/assets/decay_segmentation/Processing_results.png)
+![Preprocessed X-Ray](/Portfolio/assets/decay_segmentation/Processing_results.png)
 - Comparison of raw and preprocessed images highlighting enhanced contrast and cropped dimensions.
 
 #### **2. Decay Segmentation Results**
-![Segmentation Results](/assets/decay_segmentation/Segmentation_results.png)
+![Segmentation Results](/Portfolio/assets/decay_segmentation/Segmentation_results.png)
 - Visual comparison of ground truth and predicted segmentations, showcasing model precision.
 
 #### **3. Training Metrics**
-![Training Metrics](/assets/decay_segmentation/Training.png)
+![Training Metrics](/Portfolio/assets/decay_segmentation/Training.png)
 - Loss curves and evaluation metrics demonstrating model performance during training and validation.
-![Training Metrics](/assets/decay_segmentation/Training_results.png)
+![Training Metrics](/Portfolio/assets/decay_segmentation/Training_results.png)
 
 ---
 

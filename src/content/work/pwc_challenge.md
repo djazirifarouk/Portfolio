@@ -1,7 +1,7 @@
 ---
 title: PwC Challenge
 publishDate: 2024-12-01 00:00:00
-img: /assets/pwc_challenge/pwc_cover.jpg
+img: /Portfolio/assets/pwc_challenge/pwc_cover.jpg
 img_alt: PwC Challenge with Forage
 description: |
   Demonstrated proficiency in creating insightful Power BI dashboards and delivering actionable insights to address client challenges and improve decision-making.
@@ -24,13 +24,13 @@ Participated in the **PwC Switzerland Power BI Job Simulation** on Forage in **D
 - Created **Power BI dashboards** tailored to effectively communicate KPIs.
 - Developed the following dashboards:
   - **Call Center Trends Dashboard**: Highlighted key metrics and trends for optimizing call center performance.
-  ![Call Center Trends Dashboard](/assets/pwc_challenge/call_center.png)
+  ![Call Center Trends Dashboard](/Portfolio/assets/pwc_challenge/call_center.png)
   *An interactive dashboard where clients can see all the trends of incoming calls.*
   - **Customer Retention Dashboard**: Analyzed customer behavior and retention strategies.
-  ![Customer Retention Dashboard](/assets/pwc_challenge/customer_retention.png)
+  ![Customer Retention Dashboard](/Portfolio/assets/pwc_challenge/customer_retention.png)
   *An interactive dashboard where clients can analyze the customer retention according to their profile.*
   - **Diversity & Inclusion Dashboard**: Provided insights into workforce composition and identified areas for improvement.
-  ![Diversity & Inclusion Dashboard](/assets/pwc_challenge/diversity.png)
+  ![Diversity & Inclusion Dashboard](/Portfolio/assets/pwc_challenge/diversity.png)
   *An interactive dashboard where clients can see the performance and the diversity within the company.*
 
 #### Analytical Problem-Solving

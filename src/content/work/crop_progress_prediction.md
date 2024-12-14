@@ -1,7 +1,7 @@
 ---
 title: Crop Progress Prediction Model
 publishDate: 2023-02-01 00:00:00
-img: /assets/crop_progress/crop_progress_cover.jpg
+img: /Portfolio/assets/crop_progress/crop_progress_cover.jpg
 img_alt: Crop Progress Prediction Model with XGBoost
 description: |
   A machine learning project where it's leveraging XGBoost to accurately forecast crop progress based on historical data, weather patterns, and NDVI insights.
@@ -35,7 +35,7 @@ The **Crop Progress Prediction Model** project aims to forecast the progress of 
   - Weather data (precipitation and temperature).
   - Yield relationships with NDVI.
 - Trained the model to provide **high-accuracy forecasts** for the next three crop progress releases.
-![Model Simulation of the Crop Progress](/assets/crop_progress/simulation.png)
+![Model Simulation of the Crop Progress](/Portfolio/assets/crop_progress/simulation.png)
 *A simulation of the model output results*
 
 #### Insights Delivered 📈

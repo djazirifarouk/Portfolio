@@ -1,7 +1,7 @@
 ---
 title: Project Planner
 publishDate: 2021-12-10 00:00:00
-img: /assets/project_planner/planner_cover.jpg
+img: /Portfolio/assets/project_planner/planner_cover.jpg
 img_alt: Project Planner Web App Screenshot
 description: |
   ProjectPlanner is a web application built using Blazor Server and Entity Framework Core, designed to help users organize and manage projects with a focus on ticket management, project logging, and custom project component creation.
@@ -16,7 +16,7 @@ tags:
 ## ProjectPlanner 🗂️
 [Project Link](https://github.com/djazirifarouk/ProjectPlanner)
 **ProjectPlanner** is a web application designed for educational purposes for task management, built using **Blazor Server** and **Entity Framework Core**. This app provides users with some features for project organization, ticket management, and action logging, supporting customizability and flexibility for diverse project needs.
-![Project Workflow](/assets/project_planner/Workflow.png)
+![Project Workflow](/Portfolio/assets/project_planner/Workflow.png)
 
 ### Features Overview 🌟
 
