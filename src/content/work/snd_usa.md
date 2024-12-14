@@ -1,7 +1,7 @@
 ---
 title: Supply and Demand of the United States
 publishDate: 2023-10-01 00:00:00
-img: /assets/snd_usa/snd_usa_cover.jpg
+img: /Portfolio/assets/snd_usa/snd_usa_cover.jpg
 img_alt: Supply and Demand Outlook Project
 description: |
   A comprehensive analysis comparing historical and forecasted supply and demand data for U.S. agricultural products, integrating multiple sources to identify trends, relationships, and insights through a Power BI dashboard.
@@ -40,10 +40,10 @@ This project focused on analyzing and comparing **forecasted and actual supply a
 - Track changes over time across different sources.
 - Provide actionable insights into forecast accuracy and relationships between data points.
 
-![Example SND 1](/assets/snd_usa/snd1.png)
+![Example SND 1](/Portfolio/assets/snd_usa/snd1.png)
 *An interactive dashboard where clients can see the correlation between different items of different publish years.*
 
-![Example SND 1](/assets/snd_usa/snd2.png)
+![Example SND 1](/Portfolio/assets/snd_usa/snd2.png)
 *An interactive dashboard where clients can see the year over year of the preditctions of the same source.*
 
 #### Challenges Overcome ⚡

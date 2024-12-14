@@ -1,7 +1,7 @@
 ---
 title: Cost and Freight Project (C&F)
 publishDate: 2024-08-31 00:00:00
-img: /assets/cnf/cnf_cover.jpeg
+img: /Portfolio/assets/cnf/cnf_cover.jpeg
 img_alt: C&F Data Preparation and Dashboard
 description: |
   This project consolidates pricing and freight data to enable global price comparisons across origins and incoterms, addressing currency conversion, standardization, and security challenges through Power BI.
@@ -60,7 +60,7 @@ The Power BI dashboard visualizes consolidated price data and trends, highlighti
 - Variations between incoterms such as FOB and CNF.
 - Freight cost impacts on total pricing.
 
-![Example 1: CNF Dashboard](/assets/cnf/cnf_example.png)
+![Example 1: CNF Dashboard](/Portfolio/assets/cnf/cnf_example.png)
 *An interactive dashboard where clients can check the global agriculture prices from different origins*
 
 **⚠️ Note**: Due to copyright restrictions, specific numerical values cannot be shared in the visualizations.

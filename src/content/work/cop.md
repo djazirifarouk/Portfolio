@@ -1,7 +1,7 @@
 ---
 title: USA Cost of Production
 publishDate: 2024-03-01 00:00:00
-img: /assets/cop/cop_cover.jpg
+img: /Portfolio/assets/cop/cop_cover.jpg
 img_alt: USA Cost of Production Project
 description: |
   An automated, data-driven dashboard that provides comprehensive insights into the cost of agriculture production, helping U.S. farmers evaluate profitability and make informed decisions.
@@ -52,10 +52,10 @@ The dashboard enables clients to:
 - Assess profitability across various commodities and conditions.
 - Visualize key metrics such as land rent, machinery expenses, and revenue for each scenario.
 
-![Example 1: COP Dashboard](/assets/cop/cop_example.png)
+![Example 1: COP Dashboard](/Portfolio/assets/cop/cop_example.png)
 *An interactive dashboard where clients can check the yearly change in the cost of a product from different states*
 
-![Example 2: COP Dashboard](/assets/cop/cop_example2.png)
+![Example 2: COP Dashboard](/Portfolio/assets/cop/cop_example2.png)
 *Clients can check the profit and the return on investment from different states*
 
 **Note**: Due to copyright restrictions, numerical values in the visualizations will be omitted.
