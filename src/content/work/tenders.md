@@ -2,7 +2,7 @@
 title: Global Tenders
 publishDate: 2024-12-09 00:00:00
 img: /assets/tenders/tenders_cover.jpg
-img_alt: Global Tenders Project
+img_alt: Global Tenders Analysis Project
 description: |
   Analyzed and structured global tender data to deliver insightful, client-focused dashboards for tracking prices, quantities, and trends across multiple countries.
 tags:
