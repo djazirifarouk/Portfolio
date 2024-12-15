@@ -10,12 +10,6 @@ tags:
   - Deep Learning
   - Computer Vision
   - Mask R-CNN
-#   - Adaptive histogram equalization
-#   - Dataset exploration
-#   - Data augmentation
-#   - Contour detection
-#   - Region Proposal Network
-#   - Model training and evaluation
 ---
 
 ## Decay Segmentation and Detection Using Panoramic X-Rays 🎓

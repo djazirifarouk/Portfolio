@@ -1,7 +1,7 @@
 ---
 title: Taxes of North Africa
 publishDate: 2024-06-15 00:00:00
-img: /Portfolio/assets/taxes/taxes_cover.jpg
+img: /Portfolio/assets/taxes/taxes_cover.avif
 img_alt: Global Taxation Project
 description: |
   Analyzed taxation across North Africa to compare imported and local product prices, providing actionable insights into customs-clearance cost dynamics.

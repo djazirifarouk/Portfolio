@@ -1,7 +1,7 @@
 ---
 title: USA Cost of Production
 publishDate: 2024-03-01 00:00:00
-img: /Portfolio/assets/cop/cop_cover.jpg
+img: /Portfolio/assets/cop/cop_cover.png
 img_alt: USA Cost of Production Project
 description: |
   An automated, data-driven dashboard that provides comprehensive insights into the cost of agriculture production, helping U.S. farmers evaluate profitability and make informed decisions.
