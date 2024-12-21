@@ -12,8 +12,6 @@ import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import NormalButton from '../components/NormalButton.astro';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
@@ -205,7 +203,7 @@ const certifications = [
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
-    </div>
+    </div>			
 </section>
 <!-- Mentions -->
 			<section class="section with-background bg-variant">
@@ -679,15 +677,25 @@ const certifications = [
   });
 </script>
 
-<script>
-	document.addEventListener('DOMContentLoaded', function () {
-		const swiper = new Swiper('.carousel-container', {
-			slidesPerView: 3,
-			spaceBetween: 60,
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
+<!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+<script is:inline>
+	// This code is inlined in the head to make dark mode instant & blocking.
+	const getThemePreference = () => {
+		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+			return localStorage.getItem('theme');
+		}
+		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+	};
+	const isDark = getThemePreference() === 'dark';
+	document.documentElement.classList[isDark ? 'add' : 'remove']('theme-dark');
+
+	if (typeof localStorage !== 'undefined') {
+		// Watch the document element and persist user preference when it changes.
+		const observer = new MutationObserver(() => {
+			const isDark = document.documentElement.classList.contains('theme-dark');
+			localStorage.setItem('theme', isDark ? 'dark' : 'light');
 		});
-	});
-	</script>
+		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+	}
+</script>
