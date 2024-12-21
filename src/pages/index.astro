@@ -46,7 +46,7 @@ const recommendations = [
 		photo: '/Portfolio/assets/Farouk_Jaziri_Received_Recommendation4.webp',
 		name: 'Wassim Mandhouj',
 		position: 'Data Analyst',
-		text: "Working with Farouk Jaziri has been an exceptional experience. Farouk is a dynamic professional whose innovative approach, sharp analytical skills, and unwavering dedication consistently elevate our team. His ability to break down complex problems, uncover actionable insights, and drive data-driven decisions is remarkable. Farouk’s knack for identifying patterns, optimizing processes, and delivering impactful solutions has significantly boosted team performance. Beyond his technical expertise, his collaborative spirit and mentorship inspire growth and creativity in those around him. It’s a privilege to work with someone so dedicated and resourceful, and I’m confident his passion and skills will drive continued success in his career.",
+		text: "Working with Farouk Jaziri has been exceptional. His innovative approach, sharp analytical skills, and dedication consistently elevate our team. Farouk excels at breaking down complex problems, uncovering insights, and driving data-driven decisions. His technical expertise, collaborative spirit, and mentorship inspire growth and creativity, making him a valuable asset. Farouk’s passion and skills will surely lead to continued success in his career.",
 	}
 ];
 
@@ -88,7 +88,7 @@ const certifications = [
         "image": "/Portfolio/assets/4_SQL for Data Science.webp"
     },
 	{
-        "title": "Building Dashboards with Excel and Cognos",
+        "title": "Dashboards with Excel and Cognos",
         "issuer": "IBM",
         "description": "A comprehensive course on data analysis fundamentals, including Python, SQL, and data visualization.",
 		"link": "https://courses.edx.org/certificates/e4c7ab1819534d7ab39f39942a2f24b9",
@@ -179,30 +179,32 @@ const certifications = [
 				</div>
 			</section>
 <!-- Certifications -->
-			<section class="section with-background bg-variant" style="padding: 3rem 1rem; display: flex; flex-direction: column; align-items: center;">
-				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Professional Certifications</h3>
-					<p>
-						Here are some of the certifications I’ve earned to enhance my skills and knowledge.
-					</p>
-				</header>
-				<div class="carousel-container">
-					<div class="certifications-container">
-						{certifications.map((certification) => (
-							<a href={certification.link} target="_blank" rel="noopener noreferrer" class="certification-link">
-								<div class="certification-card">
-									<img src={certification.image} alt={`Certification for ${certification.title}`} draggable="false" />
-									<div class="certification-info">
-										<p class="certification-title">{certification.title}</p>
-										<p class="certification-issuer">{certification.issuer}</p>
-										<p class="certification-description">{certification.description}</p>
-									</div>
-								</div>
-							</a>
-						))}
-					</div>
-				</div>			
-			</section>
+<section class="section with-background bg-variant" style="padding: 3rem 1rem; display: flex; flex-direction: column; align-items: center;">
+    <header class="section-header stack gap-2 lg:gap-4">
+        <h3>Professional Certifications</h3>
+        <p>
+            Here are some of the certifications I’ve earned to enhance my skills and knowledge.
+        </p>
+    </header>
+    <div class="carousel-container swiper-container">
+        <div class="certifications-container swiper-wrapper">
+            {certifications.map((certification) => (
+                <a href={certification.link} target="_blank" rel="noopener noreferrer" class="certification-link swiper-slide">
+                    <div class="certification-card">
+                        <img src={certification.image} alt={`Certification for ${certification.title}`} draggable="false" />
+                        <div class="certification-info">
+                            <p class="certification-title">{certification.title}</p>
+                            <p class="certification-issuer">{certification.issuer}</p>
+                            <p class="certification-description">{certification.description}</p>
+                        </div>
+                    </div>
+                </a>
+            ))}
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
 <!-- Mentions -->
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
@@ -375,7 +377,7 @@ const certifications = [
 	@media (min-width: 50em) {
 		.mention-card {
 			border-radius: 1.5rem;
-			height: 9.5rem;
+			height: flex;
 		}
 	}
 	/* ====================================================== */
@@ -443,6 +445,7 @@ const certifications = [
 	@media (max-width: 50em) {
 		.recommend-card {
 			padding: 0.5rem; /* Even smaller padding */
+			width: 3rem;
 		}
 
 		.profile-photo {
@@ -476,12 +479,8 @@ const certifications = [
 .certifications-container {
 	display: flex;
 	gap: 1rem;
-	overflow-x: auto;
-	overflow-y: hidden; 
-	scroll-behavior: smooth;
-	scroll-snap-type: x mandatory;
+	overflow-x: scroll;
 	padding: 1rem;
-	-webkit-overflow-scrolling: touch;
 	box-sizing: border-box;
 }
 
@@ -502,82 +501,98 @@ const certifications = [
 
 /* Certification Card */
 .certification-card {
-	background: #fff;
-	border-radius: 12px;
-	padding: 1rem;
-	border: 1px solid #e0e0e0;
-	transition: transform 0.3s ease;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 400px; /* Increased card height */
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    will-change: transform;
 }
 
 .certification-card:hover {
-	transform: scale(1.05); /* Zoom effect on hover */
+    transform: scale(1.05);
 }
 
 /* Certification Card Image */
 .certification-card img {
-	width: 100%;
-	height: 250px;
-	border-radius: 12px;
-	object-fit: cover;
-	margin-bottom: 1rem;
+    width: 100%;
+    height: 250px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
 /* Certification Card Info */
 .certification-info {
-	padding: 0.5rem;
+    padding: 0.5rem;
 }
 
 /* Certification Title */
 .certification-title {
-	font-size: 1.2rem;
-	font-weight: bold;
-	color: #000000;
-	margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 0.5rem;
 }
 
 /* Certification Issuer and Description */
 .certification-issuer {
-	font-size: 1rem;
-	font-weight: 500;
-	color: #666;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #666;
 }
 .certification-description {
-	font-size: 0.9rem;
-	color: #333;
-	margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 1150px) {
+    .carousel-container {
+        padding: 0.25rem;
+        width: 100%;
+    }
+
+	.certification-card:hover {
+        transform: scale(1);
+    }
 }
 
 /* Responsive Styles for Smaller Screens */
 @media (max-width: 768px) {
-	.carousel-container {
-		margin-left: 5em;
-		padding: 1rem;
-	}
+    .carousel-container {
+        padding: 0.25rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
 
-	.certifications-container {
-		padding: 0.5rem;
-	}
+    .certifications-container {
+        display: flex;
+        gap: 1rem;
+    }
 
-	.certification-card {
-		height: 400px;
-	}
+    .certification-card {
+        height: 300px;
+        scroll-snap-align: start;
+    }
+    
+    .certification-card img {
+        height: 150px;
+    }
 
-	.certification-card img {
-		height: 200px;
-	}
+    .certification-title {
+        font-size: 0.9rem;
+    }
 
-	.certification-title {
-		font-size: 1rem;
-	}
-
-	.certification-issuer,
-	.certification-description {
-		font-size: 0.85rem;
-	}
+    .certification-issuer,
+    .certification-description {
+        font-size: 0.7rem;
+    }
 }
 
 </style>
@@ -661,3 +676,16 @@ const certifications = [
     });
   });
 </script>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const swiper = new Swiper('.carousel-container', {
+			slidesPerView: 3,
+			spaceBetween: 60,
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+		});
+	});
+	</script>
