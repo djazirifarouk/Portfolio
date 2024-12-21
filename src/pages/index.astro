@@ -12,12 +12,11 @@ import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import NormalButton from '../components/NormalButton.astro';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
 import Skills from '../components/Skills.astro';
+
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
@@ -103,6 +102,10 @@ const certifications = [
 ---
 
 <BaseLayout>
+	<head>
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	</head>
 	<div class="stack gap-20 lg:gap-55">
 <!-- Identity -->
 		<div class="wrapper stack gap-8 lg:gap-20">
@@ -205,7 +208,7 @@ const certifications = [
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
-    </div>
+    </div>			
 </section>
 <!-- Mentions -->
 			<section class="section with-background bg-variant">
@@ -679,15 +682,40 @@ const certifications = [
   });
 </script>
 
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script is:inline>
+	// This code is inlined in the head to make dark mode instant & blocking.
+	const getThemePreference = () => {
+		if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+			return localStorage.getItem('theme');
+		}
+		return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+	};
+	const isDark = getThemePreference() === 'dark';
+	document.documentElement.classList[isDark ? 'add' : 'remove']('theme-dark');
+
+	if (typeof localStorage !== 'undefined') {
+		// Watch the document element and persist user preference when it changes.
+		const observer = new MutationObserver(() => {
+			const isDark = document.documentElement.classList.contains('theme-dark');
+			localStorage.setItem('theme', isDark ? 'dark' : 'light');
+		});
+		observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+	}
+</script>
+
 <script>
 	document.addEventListener('DOMContentLoaded', function () {
 		const swiper = new Swiper('.carousel-container', {
 			slidesPerView: 3,
-			spaceBetween: 60,
+			spaceBetween: 30,
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
 			},
+			speed: 600, // Adjusted transition speed
+			freeMode: true, // Enable free mode for natural scrolling
 		});
 	});
-	</script>
+</script>
