@@ -66,7 +66,6 @@ import Icon from './Icon.astro';
 		}
 	}
 </style>
-
 <script>
 	class ThemeToggle extends HTMLElement {
 		constructor() {
@@ -75,9 +74,11 @@ import Icon from './Icon.astro';
 			const button = this.querySelector('button');
 
 			/** Set the theme to dark/light mode. */
-			const setTheme = (dark) => {
+			const setTheme = (dark: boolean) => {
 				document.documentElement.classList.toggle('theme-dark', dark);
-				button.setAttribute('aria-pressed', String(dark));
+				if (button) {
+					button.setAttribute('aria-pressed', String(dark));
+				}
 				localStorage.setItem('theme', dark ? 'dark' : 'light');
 			};
 
@@ -90,10 +91,13 @@ import Icon from './Icon.astro';
 			setTheme(prefersDark);
 
 			// Toggle the theme when a user clicks the button.
-			button.addEventListener('click', () => {
-				const newState = !this.isDark();
-				setTheme(newState);
-			});
+			if (button) {
+				button.addEventListener('click', () => {
+					const newState = !this.isDark();
+					setTheme(newState);
+				});
+			}
+			
 		}
 
 		isDark() {
