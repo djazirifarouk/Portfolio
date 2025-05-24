@@ -186,23 +186,25 @@ const certifications = [
             Here are some of the certifications I’ve earned to enhance my skills and knowledge.
         </p>
     </header>
-    <div class="carousel-container swiper-container">
-        <div class="certifications-container swiper-wrapper">
+    <div class="carousel-container">
+		<div class="vertical-bar left-bar"></div>
+        <div class="certifications-container">
             {certifications.map((certification) => (
-                <a href={certification.link} target="_blank" rel="noopener noreferrer" class="certification-link swiper-slide">
+				<div class="certification-link ">
                     <div class="certification-card">
-                        <img src={certification.image} alt={`Certification for ${certification.title}`} draggable="false" />
+						<a href={certification.link} target="_blank" rel="noopener noreferrer" class="certification-link-one">
+                        	<img src={certification.image} alt={`Certification for ${certification.title}`} draggable="false" />
+						</a>
                         <div class="certification-info">
                             <p class="certification-title">{certification.title}</p>
                             <p class="certification-issuer">{certification.issuer}</p>
                             <p class="certification-description">{certification.description}</p>
                         </div>
                     </div>
-                </a>
+				</div>
             ))}
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
+		<div class="vertical-bar right-bar"></div>
     </div>			
 </section>
 <!-- Mentions -->
@@ -474,13 +476,35 @@ const certifications = [
 	}
 
 	/* ====================================================== */
-	
+
+
+.vertical-bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #0064e7, #00c6ff);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 100, 231, 0.5);
+}
+
+.left-bar {
+    left: 0%; /* Adjust as needed */
+}
+
+.right-bar {
+    right: 0%; /* Adjust as needed */
+}
+
+
 /* Carousel Container */
 .certifications-container {
 	display: flex;
 	gap: 1rem;
 	overflow-x: scroll;
-	padding: 1rem;
+	overflow-y: hidden;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
 	box-sizing: border-box;
 }
 
@@ -495,7 +519,17 @@ const certifications = [
 	color: inherit;
 	flex: 0 0 auto;
 	width: 100%;
-	max-width: 350px;
+	max-width: 500px;
+	scroll-snap-align: start;
+}
+
+.certification-link-one {
+	text-decoration: none;
+	color: inherit;
+	/* flex: 0 0 auto; */
+	/* width: 100%; */
+	max-width: 100%;
+	max-height: 100%;
 	scroll-snap-align: start;
 }
 
@@ -509,18 +543,17 @@ const certifications = [
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 400px;
-    will-change: transform;
+    height: 450px;
 }
 
 .certification-card:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 /* Certification Card Image */
 .certification-card img {
     width: 100%;
-    height: 250px;
+    height: 100%;
     border-radius: 12px;
     object-fit: cover;
     margin-bottom: 1rem;
@@ -549,13 +582,40 @@ const certifications = [
     font-size: 0.9rem;
     color: #333;
     margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
+.carousel-container {
+	position: relative;
+	width: 100%;
+	padding: 0.25rem;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
+}
+
+.vertical-bar {
+	width: 4px;
+	background-color: #503D36;
+	height: 100%;
+	width: 3px;
+}
 @media (max-width: 1150px) {
-    .carousel-container {
-        padding: 0.25rem;
-        width: 100%;
-    }
+	.carousel-container {
+		position: relative;
+		width: 100%;
+		padding: 0.25rem;
+		overflow-x: auto;
+    	scroll-snap-type: x mandatory;
+    	-webkit-overflow-scrolling: touch;
+	}
+
+	.vertical-bar {
+		width: 4px;
+		background-color: #503D36;
+		height: 100%;
+    	width: 3px;
+	}
 
 	.certification-card:hover {
         transform: scale(1);
@@ -564,25 +624,44 @@ const certifications = [
 
 /* Responsive Styles for Smaller Screens */
 @media (max-width: 768px) {
-    .carousel-container {
-        padding: 0.25rem;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-    }
+  .carousel-container {
+    padding: 0.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .vertical-bar {
+    height: 100%;
+    width: 3px;
+  }
 
     .certifications-container {
         display: flex;
         gap: 1rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        max-width: 100%;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .certification-link {
+        flex: 0 0 auto;
+        width: 70%;
+        scroll-snap-align: start;
     }
 
     .certification-card {
-        height: 300px;
-        scroll-snap-align: start;
+        height: 100%;
+        width: 100%;
     }
-    
+
     .certification-card img {
-        height: 150px;
+        height: auto;
+        width: 100%;
+        display: block;
     }
 
     .certification-title {
@@ -631,54 +710,64 @@ const certifications = [
 	// Start auto-slide on page load
 	startAutoSlide();
 
-	// Function to scroll horizontally
+	// Function to scroll horizontally and prevent drag behavior
 	document.addEventListener("DOMContentLoaded", () => {
-    const container: HTMLElement = document.querySelector('.certifications-container')!;
+	const container: HTMLElement = document.querySelector('.certifications-container')!;
 
-    let isDown = false;
-    let startX: number;
-    let scrollLeft: number;
+	let isDown = false;
+	let startX: number;
+	let scrollLeft: number;
 
-    container.addEventListener('mousedown', (e) => {
-      isDown = true;
-      container.classList.add('active');
-      startX = e.pageX - container.offsetLeft;
-      scrollLeft = container.scrollLeft;
-    });
+	// Disable drag and selection for all children
+	container.querySelectorAll('*').forEach(el => {
+		(el as HTMLElement).setAttribute('draggable', 'false');
+		(el as HTMLElement).style.userSelect = 'none';
+	});
 
-    container.addEventListener('mouseleave', () => {
-      isDown = false;
-      container.classList.remove('active');
-    });
+	// Prevent native drag behavior on the container
+	container.setAttribute('draggable', 'false');
+	container.style.userSelect = 'none';
 
-    container.addEventListener('mouseup', () => {
-      isDown = false;
-      container.classList.remove('active');
-    });
+	container.addEventListener('mousedown', (e) => {
+		isDown = true;
+		container.classList.add('active');
+		startX = e.pageX - container.offsetLeft;
+		scrollLeft = container.scrollLeft;
+	});
 
-    container.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - container.offsetLeft;
-      const walk = (x - startX) * 2; // scroll speed
-      container.scrollLeft = scrollLeft - walk;
-    });
+	container.addEventListener('mouseleave', () => {
+		isDown = false;
+		container.classList.remove('active');
+	});
 
-    container.addEventListener('touchstart', (e) => {
-      startX = e.touches[0].pageX - container.offsetLeft;
-      scrollLeft = container.scrollLeft;
-    });
+	container.addEventListener('mouseup', () => {
+		isDown = false;
+		container.classList.remove('active');
+	});
 
-    container.addEventListener('touchmove', (e) => {
-      const x = e.touches[0].pageX - container.offsetLeft;
-      const walk = (x - startX) * 2;
-      container.scrollLeft = scrollLeft - walk;
-    });
-  });
+	container.addEventListener('mousemove', (e) => {
+		if (!isDown) return;
+		e.preventDefault();
+		const x = e.pageX - container.offsetLeft;
+		const walk = (x - startX) * 2; // scroll speed
+		container.scrollLeft = scrollLeft - walk;
+	});
+
+	container.addEventListener('touchstart', (e) => {
+		startX = e.touches[0].pageX - container.offsetLeft;
+		scrollLeft = container.scrollLeft;
+	});
+
+	container.addEventListener('touchmove', (e) => {
+		const x = e.touches[0].pageX - container.offsetLeft;
+		const walk = (x - startX) * 2;
+		container.scrollLeft = scrollLeft - walk;
+	});
+	});
+
 </script>
 
-<!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
 <script is:inline>
 	// This code is inlined in the head to make dark mode instant & blocking.
 	const getThemePreference = () => {
