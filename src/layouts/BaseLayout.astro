@@ -18,6 +18,44 @@ const { title, description } = Astro.props;
 <html lang="en">
 	<head>
 		<MainHead title={title} description={description} />
+		<script type="application/ld+json">
+			{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Farouk Jaziri",
+			"url": "https://djazirifarouk.github.io/Portfolio/",
+			"image": "https://djazirifarouk.github.io/Portfolio/assets/Farouk%20Jaziri%20Data%20Analyst.png",
+			"sameAs": [
+				"https://www.linkedin.com/in/djaziriferouk/",
+				"https://github.com/djazirifarouk",
+				"https://x.com/djazirifarouk"
+			],
+			"jobTitle": "Analytics Engineer",
+			"worksFor": {
+				"@type": "Organization",
+				"name": "DNEXT"
+			},
+			"alumniOf": {
+				"@type": "CollegeOrUniversity",
+				"name": "ENICarthage, University of Carthage"
+			},
+			"knowsAbout": [
+				"Data Analysis",
+				"Data Engineering",
+				"Python",
+				"Power BI",
+				"SQL",
+				"Snowflake",
+				"ETL",
+				"Data Visualization",
+				"Artificial Intelligence",
+				"Reporting",
+				"Snowflake",
+				"Excel"
+			],
+			"description": "I’m Farouk, an analytics engineer with a strong passion for continuous learning and innovation. I’m eager to connect and explore opportunities to contribute and grow."
+			}
+		</script>
 	</head>
 	<!-- Google tag (gtag.js) -->
 	<script
