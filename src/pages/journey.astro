@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import PortfolioPreviewJourney from '../components/PortfolioPreviewJourney.astro';
+import Hero from '../components/Hero.astro';
+import Grid from '../components/Grid.astro';
+
+const organizations = (await getCollection('journey')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+);
+---
+
+<BaseLayout
+	title="My Journey | Farouk Jaziri"
+	description="Learn about Farouk Jaziri's Life Journey"
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+			<Hero
+				title="My Journey"
+				tagline="Read about my journey in details."
+				align="start"
+			/>
+			<Grid variant="offset">
+				{
+					organizations.map((organization) => (
+						<li>
+							<PortfolioPreviewJourney organization={organization} />
+						</li>
+					))
+				}
+			</Grid>
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>
