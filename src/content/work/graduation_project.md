@@ -1,5 +1,5 @@
 ---
-title: Final Graduation Project
+title: Graduation Project
 publishDate: 2022-10-31 00:00:00
 img: /Portfolio/assets/decay_segmentation/decay_cover.png
 img_alt: Final Year Graduation Project
@@ -9,7 +9,6 @@ tags:
   - CRISP-DM
   - Deep Learning
   - Computer Vision
-  - Mask R-CNN
 ---
 
 ## Decay Segmentation and Detection Using Panoramic X-Rays 🎓

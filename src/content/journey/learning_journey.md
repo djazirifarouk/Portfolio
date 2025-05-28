@@ -6,8 +6,6 @@ img_alt: University Education and Growth Path
 description: |
    My academic journey, from preparatory studies to engineering graduation, shaped my technical foundation and personal growth through hands-on experiences and a constant passion for learning.
 tags:
-  - Preparatory Institute
-  - Engineering School
   - Computer Science
   - Data Analyst
   - edX

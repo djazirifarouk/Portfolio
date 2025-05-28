@@ -8,9 +8,7 @@ description: |
 tags:
   - DNEXT
   - Data Analysis
-  - Customer Success
   - Leadership
-  - Internship
 ---
 
 ## My Journey at DNEXT
