@@ -1,10 +1,10 @@
 ---
-title: Taxes of North Africa
+title: Tax Impact Analysis in North Africa
 publishDate: 2024-06-15 00:00:00
 img: /Portfolio/assets/taxes/taxes_cover.avif
-img_alt: Global Taxation Project
+img_alt: North Africa Tax Analysis Project
 description: |
-  Analyzed taxation across North Africa to compare imported and local product prices, providing actionable insights into customs-clearance cost dynamics.
+  Analyzed multi-country taxation data in North Africa to calculate post-customs import prices and compare them with local prices. Built data pipelines, scenarios, and price models to uncover cost disparities.
 tags:
   - Data Analysis
   - Reporting
@@ -12,34 +12,48 @@ tags:
   - BeautifulSoup
 ---
 
-## North Africa Taxes
+## North Africa Taxation Analysis
 
-### Project Overview 📌
-This project focused on **collecting tax data** across North African countries to incorporate it into the **Cost and Freight (CNF) data**, enabling the calculation of product prices after customs clearance. The ultimate goal was to facilitate a **comparison between imported product prices and local product prices**.
-
-#### Data Collection 🌟
-- Gathered tax data for the North African region, including:
-  - **Tunisia**
-  - **Egypt**
-  - **Morocco**
-  - **Algeria**
-- Consolidated taxation information by **product type** and **origin**.
-
-#### Analytical Insights 💡
-- Conducted **analytical scenarios** to evaluate product pricing from different origins after including relevant taxes.
-- Identified the **impact of taxation** on the final cost of imported goods compared to local products.
-
-#### Challenges Faced ⚡
-- **Lack of Historical Data:** Encountered difficulty accessing historical taxation data for the countries involved.
-  - Reached out to government authorities for assistance but received no response.
-  - Proceeded with **current taxation data** as a workaround.
-
-#### Tools and Skills Utilized 🛠️
-- **Data Analysis:** Aggregation and analysis of taxation data across regions.
-- **Comparative Analysis:** Price comparison of imported and local products.
-- **Scenario Building:** Evaluating cost implications based on different taxation policies.
-- **Cross-Regional Data Management:** Handling diverse taxation structures across multiple countries.
+### Project Scope 📌
+Collected and analyzed **import tax structures** for North African countries to quantify their impact on **Cost and Freight (CNF)** values and evaluate **price competitiveness** between imported and local products.
 
 ---
-### Outcome 🏆
-Successfully gathered and analyzed taxation data, enabling detailed comparisons between **imported and local product prices**. The analysis provided valuable insights into the cost dynamics of imported goods in North Africa, supporting informed decision-making for stakeholders.
+
+### Data Collection & Parsing 🌐
+- Targeted countries: **Tunisia, Egypt, Morocco, Algeria**.
+- Scraped and parsed publicly available tax data by **product category** and **country of origin**.
+- Utilized `BeautifulSoup` to extract structured tables from HTML sources and convert them into usable datasets.
+
+---
+
+### Analytical Framework 💡
+- **Taxation logic** modeled by product type and country.
+- Built **price calculation formulas** to estimate total cost after customs clearance.
+- Designed **comparative scenarios** to simulate pricing differences across sources and destinations.
+
+---
+
+### SQL & Reporting Integration 🧮
+- Normalized data and built **SQL queries** for region-wise and product-wise aggregation.
+- Created views to support **side-by-side price comparisons** between imported and local products.
+- Enabled **scenario-based filtering** to evaluate taxation sensitivity.
+
+---
+
+### Challenges & Mitigations ⚠️
+- **No historical data** availability: Only current-year tax rates were accessible.
+  - Contacted government sources without success.
+  - Continued analysis using static taxation snapshots.
+
+---
+
+### Tools & Techniques 🛠️
+- **Python (BeautifulSoup)**: Tax data extraction from web sources.
+- **SQL**: Data transformation and comparative aggregation.
+- **Data Modeling**: Tax logic and pricing scenarios.
+- **Cross-country Harmonization**: Unified taxonomy for North African regulations.
+
+---
+
+### Results 🎯
+Delivered an integrated dataset and analysis model comparing **post-tax import prices** with **local prices** across North Africa. This project revealed key differences in **taxation impact by country and origin**, equipping stakeholders with data to inform procurement, pricing, and sourcing decisions.

@@ -4,70 +4,71 @@ publishDate: 2024-12-09 00:00:00
 img: /Portfolio/assets/tenders/tenders_cover.avif
 img_alt: Global Tenders Analysis Project
 description: |
-  Analyzed and structured global tender data to deliver insightful, client-focused dashboards for tracking prices, quantities, and trends across multiple countries.
+  Structured and analyzed global tender data from unstructured sources, enabling clients to monitor prices, volumes, and market dynamics through custom dashboards. Focused on pattern recognition, trend analysis, and weighted pricing.
 tags:
-  - Pattern recognition
-  - Time series analysis
-  - Weighted average
-  - Client-oriented
+  - Pattern Recognition
+  - Time Series Analysis
+  - Weighted Average
+  - Client-Oriented Dashboards
 ---
 
 ## Global Tenders Analysis
 
-### Project Overview 📌
-This project involved analyzing global tender data to provide insightful visualizations and reporting for clients. The data process encompassed **extracting, transforming, and consolidating data** from diverse sources, structuring it to meet client needs, and delivering actionable insights through comprehensive dashboards.
+### Project Scope 📌
+Analyzed unstructured tender data from multiple countries to produce **client-specific dashboards**. The aim was to deliver clear insights into **pricing**, **quantities**, and **purchasing trends**, helping stakeholders track market dynamics and make informed procurement decisions.
 
-#### Data Processing 📈
-- Extracted tender data from unstructured text files using Python.
-- Identified common patterns to transform data into a structured format.
-- Consolidated data from various sources, including clients and external platforms.
+---
 
-#### Insights and Dashboards 💡
-1. **News Page**:
-   - Displayed the latest tenders for each product and country.
+### Data Transformation Workflow 🔄
+- **Parsing unstructured data**: Extracted and cleaned tender entries from raw text and client-provided files using Python.
+- **Pattern recognition**: Standardized product names, delivery formats, origins, and price structures.
+- **Multi-source integration**: Combined internal and external data feeds for global coverage.
 
-![Tenders News](/Portfolio/assets/tenders/1_Power_BI_Analysis.png)
-*Showcasing the latest tenders*
+---
 
-2. **Price Analysis**:
-   - Created seasonal charts to compare historical prices with year-by-year trends.
-   - Enabled client-specific configurations, such as defining crop year start months.
-   - Incorporated averages for the past 3, 5, and 10 years into price trend lines.
+### Key Dashboards & Analytics 📊
 
-![Price Analysis](/Portfolio/assets/tenders/2_Power_BI_Analysis.png)
-*Showcasing the prices line chart analysis*
+1. **News Overview**  
+   - Displayed real-time updates on latest tenders by product and country.  
+   ![News](/Portfolio/assets/tenders/1_Power_BI_Analysis.png)
 
-3. **Quantity Analysis**:
-   - Developed a matrix table showing prices by delivery dates for each origin.
-   - Created seasonal and cumulative monthly quantity tables to compare yearly trends.
-   - Included a quarterly proportions table for average tendered quantities.
+2. **Price Trend Analysis**  
+   - Built seasonal line charts showing current vs. historical price patterns.  
+   - Included **3-, 5-, and 10-year rolling averages** for trend context.  
+   - Configurable by **crop year start month** to match client use cases.  
+   ![Price](/Portfolio/assets/tenders/2_Power_BI_Analysis.png)
 
-![Quantity Analysis](/Portfolio/assets/tenders/3_Power_BI_Analysis.png)
-*Showcasing the monthly quantity analysis*
+3. **Quantity Monitoring**  
+   - Visualized monthly and seasonal quantities by origin and delivery date.  
+   - Developed **cumulative and quarterly views** for yearly comparisons.  
+   ![Quantity](/Portfolio/assets/tenders/3_Power_BI_Analysis.png)
 
-4. **Pace and Purchase Trends**:
-   - Designed line charts to monitor purchasing trends.
-   - Built a purchase history dashboard to compare each tender's purchase price with the weighted average price, identifying patterns of over- or under-payment.
+4. **Purchase History & Trend Detection**  
+   - Tracked purchase pace across time.  
+   - Compared tender prices vs. **weighted averages** to flag over/under-payments.  
+   ![Pace](/Portfolio/assets/tenders/4_Power_BI_Analysis.png)  
+   ![History](/Portfolio/assets/tenders/5_Power_BI_Analysis.png)
 
-![Pace Analysis](/Portfolio/assets/tenders/4_Power_BI_Analysis.png)
-*Showcasing the pace and proportion analysis*
+---
 
-![Quantity Analysis](/Portfolio/assets/tenders/5_Power_BI_Analysis.png)
-*Showcasing purchase history dashboard*
+### Technical Highlights 🛠️
+- **Python**: For pattern extraction, cleaning, and transformation of unstructured tender records.
+- **Power BI**: For building interactive dashboards tailored to client preferences.
+- **Time Series & Weighted Averages**: For historical comparisons and purchase performance insights.
+- **Client-Centric UX**: Configurable features like crop-year shifts, dynamic filters, and interactive charts.
 
-#### Challenges Overcome ⚡
-- Adapted data transformation processes to fit unstructured tender formats.
-- Adopted a client-centric perspective to anticipate user needs and ensure the data was presented in a business-relevant manner.
+---
 
-### Tools and Skills Utilized 🛠️
-- Python for data extraction, cleaning, and structuring.
-- Seasonal and trend analysis using advanced data visualization techniques.
-- Comparative analytics for price and quantity evaluation.
-- Dashboard development with client-focused configurations and actionable insights.
-- Data aggregation across multiple countries and sources.
+### Challenges & Resolutions ⚠️
+- Resolved issues with non-standard tender formats via **custom pattern detection**.
+- Balanced technical rigor with **business relevance**, aligning dashboards with real client workflows.
 
-### Outcome 🏆
-This project provided clients with a comprehensive understanding of tender activities, offering tools to track prices, analyze quantities, and compare historical trends. The dashboards delivered actionable insights into tender purchases and their implications.
+---
 
+### Outcome 🎯
+Delivered a comprehensive suite of dashboards enabling clients to:
+- Monitor real-time tender activity.
+- Benchmark prices against historical norms.
+- Track purchase patterns and identify cost-saving opportunities.
 
-*Note: All data used in this project has been hidden to comply with copyright restrictions.*
+> *Note: All visuals have been anonymized to preserve data confidentiality.*
