@@ -13,7 +13,7 @@ tags:
 
 ## My Academic and Learning Journey 🎓
 
-### Preparatory Engineering Institute of Monastir (2017–2019) 📚  
+#### Preparatory Engineering Institute of Monastir (2017–2019) 📚  
 ![IPEIM](/Portfolio/assets/ipeim.webp) 
 In August 2017, I began my higher education journey at the <a href="https://ipeim.rnu.tn/" target="_blank" rel="noopener noreferrer"><strong>Preparatory Engineering Institute of Monastir</strong>, Tunisia</a>, with a focus on **MP (Mathématiques–Physique)**.  
 The **MP program** is an intensive and highly selective curriculum in Tunisia's preparatory schools designed to foster strong foundations in:
@@ -38,7 +38,7 @@ In July 2019, I successfully ranked **507 out of 1600**, earning admission to on
 
 ---
 
-### National Engineering School of Carthage (2019–2022) 💻  
+#### National Engineering School of Carthage (2019–2022) 💻  
 ![ENICARTHAGE](/Portfolio/assets/enicarthage.webp) 
 In August 2019, I joined the <a href="http://www.enicarthage.rnu.tn/" target="_blank" rel="noopener noreferrer"><strong>National Engineering School of Carthage</strong>, Carthage University</a>, to pursue a **Computer Science Engineering** degree.
 
@@ -56,7 +56,7 @@ This well-rounded education equipped me with the tools to think critically, buil
 
 ---
 
-### Internships and Real-World Application 🌍
+#### Internships and Real-World Application 🌍
 
 ##### 🛠️ Remote Internship at FreshFind – Toronto, Canada (Summer 2021)  
 ![Freshfind](/Portfolio/assets/freshfind.webp) 
@@ -88,7 +88,7 @@ On **October 31, 2022**, I defended my final project in front of a jury, marking
 
 ---
 
-### Lifelong Learning & Certifications 🌱  
+#### Lifelong Learning & Certifications 🌱  
 
 After joining my first job, I took my learning even further. I started by exploring **Power BI** tutorials on YouTube. However, wanting a structured and recognized path, I enrolled in the **IBM Data Analyst Professional Certificate** on **edX**.
 
@@ -101,7 +101,7 @@ In just **four months**, I completed the program, gaining hands-on experience th
 
 ---
 
-### What’s Next? 🚀  
+#### What’s Next? 🚀  
 
 Today, I remain committed to **continuous learning**. I actively seek out new technologies, trends, and tools that can help solve real-world problems. Whether it's through courses, projects, or real-life challenges, I’m always eager to:
 
