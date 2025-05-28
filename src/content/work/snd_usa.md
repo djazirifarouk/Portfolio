@@ -1,64 +1,83 @@
 ---
-title: Supply and Demand of the United States
+title: U.S. Agricultural Supply & Demand Analysis
 publishDate: 2023-10-01 00:00:00
 img: /Portfolio/assets/snd_usa/snd_usa_cover.webp
-img_alt: Supply and Demand Outlook Project
+img_alt: Supply and Demand Outlook Technical Project
 description: |
-  A comprehensive analysis comparing historical and forecasted supply and demand data for U.S. agricultural products, integrating multiple sources to identify trends, relationships, and insights through a Power BI dashboard.
+  A multi-source, data-intensive project integrating historical and forecasted agricultural data from U.S. publications. Built an automated pipeline and Power BI dashboard for statistical analysis, trend tracking, and inter-source comparison.
 tags:
   - Mapping
   - Trend Analysis
   - Advanced DAX
 ---
 
-## Supply and Demand Analysis of USA
+## U.S. Agricultural Supply & Demand Analysis
 
-### Project Overview 📌
-This project focused on analyzing and comparing **forecasted and actual supply and demand data** for the United States. The goal was to consolidate insights from multiple sources to create a unified dashboard that offers a **comprehensive historical and forecasted analysis** for various supply and demand items such as **production, carry-in, carry-out, exports, and yield**.
+### Project Scope 📌
+Developed an end-to-end analytical solution for comparing **historical and forecasted supply-demand metrics** for U.S. agricultural products. This includes time-series extraction, source mapping, correlation studies, and Power BI integration.
 
-#### Data Collection 📥
-- **Scraped historical data** from published PDF articles and aggregated them into a single, structured DataFrame.
-- Differentiated between various publications to ensure accurate tracking of changes over time.
+---
 
-#### Data Mapping 🔗
-- Mapped supply and demand items across three sources to maintain consistency and uniformity across datasets.  
-- Standardized naming conventions and ensured alignment between historical and forecasted data.
+### Data Extraction & Standardization 📥
+- **Automated scraping** from structured and unstructured PDF reports.
+- Parsed textual data into structured formats using Python.
+- Managed temporal variations in published formats across years and sources.
+- Consolidated data into a master DataFrame for longitudinal analysis.
 
-#### Comparative Analysis 📉
-- Compared forecasted values from three sources to actual results, highlighting deviations and trends.  
-- Explored historical changes to identify **relationships between supply and demand items** across sources.
+---
 
-#### Advanced Insights 📐
-- Conducted correlation analysis between:
-  - Historical and forecasted data for the same source.
-  - Published articles from the current year and the previous year.
-- Created **scatter plots** and calculated **R² values** for trend lines to evaluate relationships using Power BI and DAX.
+### Mapping and Harmonization 🔗
+- Built a **mapping schema** to align naming conventions and units across three major sources.
+- Merged datasets into a consistent model using item-wise and source-wise harmonization logic.
+- Created data dictionaries for historical and forecasted item alignment.
 
-#### Dashboard Creation 📊
-- Designed an interactive Power BI dashboard to:
-- Visualize historical supply and demand data for each item.
-- Track changes over time across different sources.
-- Provide actionable insights into forecast accuracy and relationships between data points.
+---
+
+### Analytical Processing & Correlation Analysis 📉
+- Compared:
+  - Forecasted vs. actual data from the same source.
+  - Forecasts from multiple sources published in the same and different years.
+- Applied statistical modeling:
+  - Generated **scatter plots** and **R² scores** to quantify prediction accuracy.
+  - Explored relationships between items like yield, exports, and carry-out stocks.
+
+---
+
+### Power BI Dashboard Engineering 📊
+- Designed an interactive dashboard to:
+  - Filter by source, item, year, and data type (forecast/historical).
+  - Visualize correlations and deviations between multiple forecasts.
+  - Enable historical trend analysis using custom DAX logic.
+- Integrated R² logic and slicers for comparative insight generation.
 
 ![Example SND 1](/Portfolio/assets/snd_usa/1_Scatter_Plot_PowerBI.png)
-*An interactive dashboard where clients can see the correlation between different items of different publish years.*
+*Scatter plot of item correlation across publishing years.*
 
-![Example SND 1](/Portfolio/assets/snd_usa/2_PowerBI.png)
-*An interactive dashboard where clients can see the year over year of the preditctions of the same source.*
+![Example SND 2](/Portfolio/assets/snd_usa/2_PowerBI.png)
+*Year-over-year forecast comparisons within the same source.*
 
-#### Challenges Overcome ⚡
-- **Data Consolidation:** Addressed inconsistencies in item definitions across sources by implementing a robust mapping strategy.  
-- **Historical Data Extraction:** Overcame the difficulty of extracting information from multiple PDF formats through efficient scraping techniques.
+---
 
-### Tools and Skills Utilized 🛠️
-- **Data Extraction and Scraping:** Extracting data from PDFs and converting it into a usable format.  
-- **Data Mapping:** Standardizing items across multiple sources for consistency.  
-- **Power BI and DAX:** Creating interactive dashboards, scatter plots, and calculating R² values.  
-- **Time-Series Analysis:** Comparing historical and forecasted data trends.  
-- **Statistical Analysis:** Identifying relationships between items and sources using correlation metrics.  
-- **Data Cleaning and Preprocessing:** Ensuring data quality for accurate analysis.  
+### Technical Challenges ⚡
+- **Multi-format scraping**: Extracting structured information from evolving PDF formats.
+- **Cross-source inconsistency**: Handling overlapping item names with different definitions.
+- **Forecast tracking**: Matching forecasted values over years with observed outcomes for validation.
 
-### Outcome 🏆
-Delivered a **unified dashboard** providing detailed insights into historical and forecasted supply and demand data for the USA. The analysis enabled stakeholders to assess the accuracy of forecasts, understand interrelationships between supply and demand items, and make data-driven decisions with confidence.
+---
 
-⚠️ *All data have been hidden for **copyright protection**.*
+### Stack and Techniques 🛠️
+- **Python**: PDF scraping, data structuring, and merging workflows.
+- **Pandas & NumPy**: Data preprocessing and manipulation.
+- **Power BI & DAX**: Dashboard logic, custom metrics (e.g., R²), dynamic filtering.
+- **Statistical Methods**: Correlation coefficients, scatter plot regression.
+
+---
+
+### Deliverables 🎯
+- Engineered a unified dataset combining multiple sources over several years.
+- Created a fully interactive Power BI dashboard enabling:
+  - Historical vs. forecasted data analysis.
+  - Inter-source and intra-source forecast evaluation.
+  - Trend and anomaly detection through visual analytics.
+
+> ⚠️ All visual outputs are shown without data values to respect content usage constraints.
