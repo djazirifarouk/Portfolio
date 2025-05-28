@@ -7,10 +7,8 @@ description: |
   ProjectPlanner is a web application built using Blazor Server and Entity Framework Core, designed to help users organize and manage projects with a focus on ticket management, project logging, and custom project component creation.
 tags:
   - Blazor
-  - .NET
   - Entity Framework Core
-  - Web Development
-  - Project Management
+  - Web Dev
 ---
 
 ## ProjectPlanner 🗂️

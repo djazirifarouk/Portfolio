@@ -36,7 +36,7 @@ One of the key challenges I solved was creating a dynamic date axis that can sta
 
 To ensure that visualizations load swiftly and analyses are performed efficiently, I focused on **optimizing DAX queries**. By refining DAX measures, I significantly reduced the computation time, allowing for a smoother user experience without compromising on the detail and complexity of insights available.
 
-## Power BI Dashboard Examples
+<!-- ## Power BI Dashboard Examples
 
 Below are some visual examples of complex Power BI dashboards created to tackle client needs, including custom date-axis adjustments, optimized DAX calculations, and solutions for data consistency.
 
@@ -50,7 +50,7 @@ Below are some visual examples of complex Power BI dashboards created to tackle 
 *A visual showcasing complex DAX calculations made with simple visual calculations.*
 
 ![Example 3: KPI and Performance Analysis](/Portfolio/assets/power_bi_dev/kpi.png)
-*Interactive dashboard showcasing key metrics for performance monitoring and decision-making.*
+*Interactive dashboard showcasing key metrics for performance monitoring and decision-making.* -->
 
 #### Summary
 

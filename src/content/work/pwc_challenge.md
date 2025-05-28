@@ -9,7 +9,6 @@ tags:
   - Power BI
   - DAX
   - KPIs
-  - Insights
   - Self-Reflection
 ---
 

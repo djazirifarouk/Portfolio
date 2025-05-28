@@ -9,7 +9,6 @@ tags:
   - Case Study
   - Problem-solving
   - Reporting
-  - Insights
 ---
 
 ## Bolt Challenge Data Analysis
