@@ -109,4 +109,4 @@ Today, I remain committed to **continuous learning**. I actively seek out new te
 - **Adapt quickly**  
 - **Create impact**  
 
-The journey never stops—and I’m always ready for the next big challenge.
+The journey never stops—and I’m always ready for the next big challenge. 
