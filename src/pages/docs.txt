@@ -1,0 +1,7 @@
+1
+<!-- <div style="margin-right: 10px; flex: 1; text-align: center;">
+							<NormalButton href="/Portfolio/assets/Farouk Jaziri Resume.pdf">
+								<Icon icon="cv" size="1em" />
+								Resume
+							</NormalButton>
+						</div> -->
