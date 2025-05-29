@@ -17,6 +17,20 @@ const { title, description } = Astro.props;
 
 <html lang="en">
 	<head>
+		<!-- Google Tag Manager -->
+		<script>
+			(function(w,d,s,l,i){
+				(w as any)[l]= (w as any)[l] || [];
+				(w as any)[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+				var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+				(j as HTMLScriptElement).async=true;(j as HTMLScriptElement).src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+				if (f.parentNode) {
+					f.parentNode.insertBefore(j, f);
+				}
+			})(window,document,'script','dataLayer','GTM-T7MMHMGD');
+		</script>
+		<!-- End Google Tag Manager -->
 		<MainHead title={title} description={description} />
 		<script type="application/ld+json">
 			{
@@ -72,6 +86,11 @@ const { title, description } = Astro.props;
 		gtag("config", "G-2BWTLFPJY7");
 	</script>
 	<body>
+		<!-- Google Tag Manager (noscript) -->
+			<noscript>
+				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7MMHMGD" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+			</noscript>
+		<!-- End Google Tag Manager (noscript) -->
 		<div class="stack backgrounds">
 			<Nav />
 		<div style="margin: 7em;"></div>
