@@ -11,7 +11,7 @@ tags:
   - Personal Growth
 ---
 
-# My AIESEC Journey
+## My AIESEC Journey 🚶‍♂️‍➡️
 
 In October 2018, I embarked on a journey that would fundamentally reshape who I am. I joined AIESEC —a global youth-led organization— without knowing that this step would help me transform from a shy introvert into someone capable of standing confidently in front of hundreds of people. It was through this experience that I discovered new sides of my personality and began a process of continuous growth that still shapes me today.
 
