@@ -12,7 +12,10 @@ tags:
 ---
 
 ## Decay Segmentation and Detection Using Panoramic X-Rays 🎓
-[Presentation Link](https://docs.google.com/presentation/d/e/2PACX-1vR-tgk9MZQ1UwSPiyQJO9mp2HmT77qdUiAVKzI0k_ClIx6znv-Hr08B1fXRYv9sW1T5mWLexdpxE6HR/pub?start=true&loop=true&delayms=3000)
+<a href="/Portfolio/assets/decay_segmentation/Farouk_Jaziri_Decay_Segmentation_and_Detection_Project.pdf" target="_blank" rel="noopener noreferrer">Project Report File</a>  
+
+<a href="https://docs.google.com/presentation/d/e/2PACX-1vR-tgk9MZQ1UwSPiyQJO9mp2HmT77qdUiAVKzI0k_ClIx6znv-Hr08B1fXRYv9sW1T5mWLexdpxE6HR/pub?start=true&loop=true&delayms=3000" target="_blank" rel="noopener noreferrer">Presentation Link</a>  
+
 ### Project Overview
 This project automates the segmentation and detection of tooth decay in panoramic dental X-rays using advanced AI techniques. It was undertaken as part of my final graduation internship at **AI Diagnosis Vision (AIDV)**, a company specializing in intelligent healthcare solutions. The results were presented and approved during my graduation defense.
 
