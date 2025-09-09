@@ -214,27 +214,50 @@ const certifications = [
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Mentions</h3>
 					<p>
-						I have been fortunate enough to receive praise for my work on several occasions. Take
-						a look below to learn more.
+					I have been fortunate enough to receive praise for my work on several occasions. 
+					Take a look below to learn more.
 					</p>
 				</header>
+
 				<div class="gallery">
-					<div class="recommend-slider" id="slider">
-						<div class="slider-track">
+					<div class="recommend-slider-wrapper">
+						<!-- Left arrow OUTSIDE -->
+						<button class="arrow-svg left" id="prevBtn">
+							<svg width="40" height="40" viewBox="0 0 24 24" fill="none" 
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 18L9 12L15 6" stroke="#1b9ae4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
+						<div class="recommend-slider" id="slider">
+							<div class="slider-track">
 							{recommendations.map((recommendation) => (
 								<div class="recommend-card">
-									<img src={recommendation.photo} alt={`Profile of ${recommendation.name}`} class="profile-photo" />
-									<div class="text-container">
-										<p class="name">{recommendation.name}</p>
-										<p class="position">{recommendation.position}</p>
-										<p class="recommendation-text">{recommendation.text}</p>
-									</div>
+								<img 
+									src={recommendation.photo} 
+									alt={`Profile of ${recommendation.name}`} 
+									class="profile-photo" 
+								/>
+								<div class="text-container">
+									<p class="name">{recommendation.name}</p>
+									<p class="position">{recommendation.position}</p>
+									<p class="recommendation-text">{recommendation.text}</p>
+								</div>
 								</div>
 							))}
+							</div>
 						</div>
+
+						<!-- Right arrow OUTSIDE -->
+						<button class="arrow-svg right" id="nextBtn">
+							<svg width="40" height="40" viewBox="0 0 24 24" fill="none" 
+								xmlns="http://www.w3.org/2000/svg">
+								<path d="M9 6L15 12L9 18" stroke="#1b9ae4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+						</button>
 					</div>
 				</div>
 			</section>
+
 		</main>
 
 		<ContactCTA />
@@ -675,6 +698,59 @@ const certifications = [
         font-size: 0.7rem;
     }
 }
+/* ====================================================== */
+	.recommend-slider-wrapper {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	}
+
+	.recommend-slider {
+	overflow: hidden;
+	width: 80%; /* adjust as needed */
+	}
+
+	.slider-track {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	}
+
+	.arrow-outside.left {
+	margin-right: 1rem;
+	}
+
+	.arrow-outside.right {
+	margin-left: 1rem;
+	}
+	
+	.arrow-svg {
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+	}
+
+	.arrow-svg svg {
+	transition: stroke 0.3s ease, filter 0.3s ease;
+	}
+
+	.arrow-svg:hover svg {
+	stroke: #fff;
+	filter: drop-shadow(0 0 10px #00f7ff) drop-shadow(0 0 20px #1b9ae4);;
+	transform: scale(1.2);
+	}
+
+	.arrow-svg.left {
+	margin-right: 1rem;
+	}
+
+	.arrow-svg.right {
+	margin-left: 1rem;
+	}
+
+
+/* ====================================================== */
 
 </style>
 
@@ -682,34 +758,53 @@ const certifications = [
 	let currentIndex = 0;
 	let autoSlide: number;
 
+	const sliderTrack: HTMLElement = document.querySelector('.slider-track')!;
+	const totalSlides = sliderTrack.children.length;
+
+	// Function to update slide position
+	function updateSlider() {
+	sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+	}
+
 	// Function to move to the next slide
-	function moveSlider() {
-		const sliderTrack: HTMLElement = document.querySelector('.slider-track')!;
-		if (sliderTrack) {
-			sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-		}
-		const totalSlides = sliderTrack.children.length;
-
-		currentIndex = (currentIndex + 1) % totalSlides;
-		sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+	function nextSlide() {
+	currentIndex = (currentIndex + 1) % totalSlides;
+	updateSlider();
 	}
 
-	// Start the auto-slide with interval
+	// Function to move to the previous slide
+	function prevSlide() {
+	currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+	updateSlider();
+	}
+
+	// Auto-slide
 	function startAutoSlide() {
-		autoSlide = setInterval(moveSlider, 5000);
+	autoSlide = setInterval(nextSlide, 5000);
 	}
-
-	// Stop the auto-slide
 	function stopAutoSlide() {
-		clearInterval(autoSlide);
+	clearInterval(autoSlide);
 	}
 
-	// Event listeners to start/stop the slide on hover
+	// Event listeners
+	document.getElementById('nextBtn')!.addEventListener('click', () => {
+	stopAutoSlide();
+	nextSlide();
+	startAutoSlide();
+	});
+
+	document.getElementById('prevBtn')!.addEventListener('click', () => {
+	stopAutoSlide();
+	prevSlide();
+	startAutoSlide();
+	});
+
 	const slider: HTMLElement = document.getElementById('slider')!;
 	slider.addEventListener('mouseenter', stopAutoSlide);
 	slider.addEventListener('mouseleave', startAutoSlide);
 
-	// Start auto-slide on page load
+	// Initialize
+	updateSlider();
 	startAutoSlide();
 
 	// Function to scroll horizontally and prevent drag behavior
