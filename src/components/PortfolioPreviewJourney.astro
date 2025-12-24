@@ -5,10 +5,10 @@ interface Props {
 	organization: CollectionEntry<'journey'>;
 }
 
-const { data, slug } = Astro.props.organization;
+const { data, id } = Astro.props.organization;
 ---
 
-<a class="card" href={`/Portfolio/journey/${slug}`}>
+<a class="card" href={`/Portfolio/journey/${id}`}>
 	<span class="title">{data.title}</span>
 	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
 </a>
