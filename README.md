@@ -28,10 +28,10 @@ I'm Farouk, a Data Analyst and Software Engineer with a strong foundation in Pyt
 ## Experience 🏢
 
 ### Data Analyst at DNEXT (Sousse, Tunisia)
-*May 2022 - Present*
+*February 2023 - Present*
 
 ### Data Scientist Intern at AI Diagnosis Vision (Tunis, Tunisia)
-*February 2022 - May 2022*
+*February 2022 - September 2022*
 
 ### Software Engineer Intern at FreshFind (Ontario, Canada)
 *July 2021 - August 2021*
