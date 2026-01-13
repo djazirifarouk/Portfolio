@@ -56,5 +56,5 @@ I'm Farouk, a Data Analyst and Software Engineer with a strong foundation in Pyt
 
 For collaboration or inquiries, please reach out:
 - **Email**: [farouk.djaziri@protonmail.com]
-- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/djaziriferouk/)
+- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/djazirifarouk/)
 - **GitHub**: [Github Profile](https://github.com/djazirifarouk)
